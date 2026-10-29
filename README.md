@@ -19,13 +19,15 @@ Na pasta onde está o `fde-aula04-reembolso-inicial`:
 
 ```bash
 git clone https://github.com/dantaspaulo/fde-aula04-trava-do-agente
-cp -R fde-aula04-trava-do-agente/.claude fde-aula04-trava-do-agente/CLAUDE.md fde-aula04-reembolso-inicial/
+cp -R fde-aula04-trava-do-agente/.claude fde-aula04-reembolso-inicial/
 cd fde-aula04-reembolso-inicial
 bun .claude/hooks/trava.teste.mjs             # 22 passaram, 0 falharam
 bun .claude/hooks/trava.teste.mjs --mutante   # MUTANTE PEGO
 ```
 
-O `bun test` da prática continua com a mesma contagem: o teste da trava não termina em `.test.ts`.
+Copie só a pasta `.claude`. O `CLAUDE.md` do repo inicial já é um link para o `AGENTS.md`: as regras em texto já estão
+lá, e a trava é o mecanismo que faz valer. O `bun test` da prática continua com a mesma contagem: o teste da trava não
+termina em `.test.ts`.
 Sem Bun, o Node também roda: `node .claude/hooks/trava.teste.mjs`. No Windows, use WSL ou Git Bash.
 
 ## Ver funcionando
